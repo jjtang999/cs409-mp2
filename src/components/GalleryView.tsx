@@ -19,7 +19,7 @@ const GalleryView: React.FC = () => {
       try {
         setLoading(true);
         setError(null);
-        const response = await marvelApi.getCharacters({ limit: 100 }); // Get more characters
+        const response = await marvelApi.getCharacters({ limit: 50 });
         setCharacters(response.data.results);
       } catch (err) {
         setError('Failed to fetch characters');

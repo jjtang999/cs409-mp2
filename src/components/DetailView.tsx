@@ -20,14 +20,14 @@ const DetailView: React.FC = () => {
         setLoading(true);
         setError(null);
 
-        // First, fetch the specific character by ID
+        // Fetch the specific character by ID
         const characterResponse = await marvelApi.getCharacterById(parseInt(id!));
         
         if (characterResponse.data.results.length > 0) {
           const currentChar = characterResponse.data.results[0];
           setCharacter(currentChar);
           
-          // Then fetch all characters for navigation
+          // Fetch all characters for navigation
           const allResponse = await marvelApi.getCharacters({ limit: 100 });
           setAllCharacters(allResponse.data.results);
           

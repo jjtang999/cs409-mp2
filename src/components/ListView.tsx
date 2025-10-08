@@ -19,7 +19,7 @@ const ListView: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedQuery(filters.query);
-    }, 500); // Wait 500ms after user stops typing
+    }, 500);
 
     return () => clearTimeout(timer);
   }, [filters.query]);
@@ -48,7 +48,7 @@ const ListView: React.FC = () => {
     };
 
     fetchInitialCharacters();
-  }, []); // Only run on mount
+  }, []);
 
   useEffect(() => {
     // Only fetch if there's a debounced search query

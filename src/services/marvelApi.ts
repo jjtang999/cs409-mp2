@@ -29,7 +29,7 @@ export const marvelApi = {
     const response = await axios.get(`${MARVEL_API_BASE_URL}/characters`, {
       params: {
         ...authParams,
-        limit: params.limit || 50, // Default to 50 characters
+        limit: params.limit || 50,
         offset: params.offset || 0,
         orderBy: params.orderBy || 'name',
         ...(params.nameStartsWith && { nameStartsWith: params.nameStartsWith }),
