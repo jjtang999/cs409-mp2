@@ -1,0 +1,145 @@
+.list-view {
+  padding: 20px;
+}
+
+.search-controls {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.sort-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.sort-button {
+  padding: 10px 20px;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.sort-button:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.sort-button.active {
+  background: #667eea;
+  color: white;
+}
+
+.character-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.character-item {
+  display: flex;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.character-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.character-thumbnail {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.character-info {
+  flex: 1;
+  text-align: left;
+}
+
+.character-name {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.character-description {
+  margin: 0 0 15px 0;
+  color: #666;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.character-stats {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.character-stats span {
+  background: #f0f2f5;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .character-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .character-thumbnail {
+    margin: 0 auto 15px auto;
+  }
+
+  .character-info {
+    text-align: center;
+  }
+
+  .sort-controls {
+    flex-direction: column;
+  }
+}
