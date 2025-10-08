@@ -24,15 +24,6 @@ const ListView: React.FC = () => {
     return () => clearTimeout(timer);
   }, [filters.query]);
 
-  const handleSearchSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setDebouncedQuery(filters.query);
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFilters(prev => ({ ...prev, query: e.target.value }));
-  };
-
   const handleQueryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFilters(prev => ({ ...prev, query: e.target.value }));
   };
